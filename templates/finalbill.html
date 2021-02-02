@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    <input   type="text" name="id">Order id<br>
+    <button type="submit">submit</button>
+</form>
+{% if obj %}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Order Id</th>
+        <th scope="col">Table id</th>
+        <th scope="col">Peoples</th>
+        <th scope="col">amount</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+
+        <td>{{obj.order_id}}</td>
+        <td>{{obj.table_id}}</td>
+        {% for i in name %}
+        <td>{{i}}</td>
+
+        {% endfor %}
+
+        <td>{{obj.total_amount}}</td>
+
+    </tr>
+
+    </tbody>
+</table>
+{% endif %}
+</body>
+</html>

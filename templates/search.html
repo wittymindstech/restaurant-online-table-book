@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block body %}
+<div class="container margin_60_40">
+    <div class="main_title">
+        <span><em></em></span>
+        <h2>Serach Restaurants</h2>
+        <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+        <a href="#0">View All</a>
+    </div>
+
+    <div class="owl-carousel owl-theme carousel_4">
+        <div class="item">
+            <div class="strip">
+                <figure>
+                    <span class="ribbon off">-30%</span>
+                    <img src="img/lazy-placeholder.png" data-src="img/location_1.jpg" class="owl-lazy" alt="">
+                    <a href="{% url 'inside' %}" class="strip_info">
+                        <small>Pizza</small>
+                        <div class="item_title">
+                            <h3>{{name}}</h3>
+                            <small>27 Old Gloucester St</small>
+                        </div>
+                    </a>
+                </figure>
+                <ul>
+                    <li><span class="loc_open">Now Open</span></li>
+                    <li>
+                        <div class="score"><span>Superb<em>350 Reviews</em></span><strong>8.9</strong></div>
+                    </li>
+                </ul>
+            </div>
+        </div></div>
+{% endblock  %}
+</html>
